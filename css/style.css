@@ -15,8 +15,12 @@ p{
 ul{
 	list-style-type: none;
 }
+h2{
+	color: rgba(0,0,0,0.7);
+	padding: 5px;
+}
 /*Pozadinska boja*/
-#header, #autorSlika{
+#header{
 	background-color: rgb(250, 232, 236);
 }
 #sadrzaj, #conteiner, #footer, #mreze  {
@@ -30,6 +34,20 @@ ul{
 	width: 100%;
 	 animation: tracking-in-expand-fwd-top 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    /*letter-spacing: 2px;*/
+    transform: translateZ(-700px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity:1;
+  }
+}
 #header{
 	width: inherit;
 	height: 70px;
@@ -42,10 +60,14 @@ ul{
 	position: absolute;
 	top: 5px;
 }
-#logo a, .cenovnik h1, .sredina h1, .kontakt h1{
+#logo a, .cenovnik h1, .sredina h1, .kontakt h1, .slike h1{
 	color: rgba(0,0,0,0.7);
 	font-family: 'Caveat', cursive;
 	font-size: 50px;
+}
+#conteiner h1, .slike h1{
+	text-align: center;
+	font-family: 'Caveat', cursive;
 }
 .prvoSlovo{
 	 color: #cd5c5c;
@@ -77,21 +99,6 @@ ul{
 	background-position: center center;
 	background-attachment: fixed; 
 }
-@keyframes tracking-in-expand-fwd-top {
-  0% {
-    letter-spacing: -0.5em;
-    transform: translateZ(-700px) translateY(-500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
 .padding-top-bottom-130{
 	padding-top: 300px;
 	padding-bottom: 300px;
@@ -114,18 +121,14 @@ ul{
     padding: 20px;
     color: rgb(250, 232, 236);
 }
-#sadrzaj1 p{
+/*#sadrzaj1 p, #autorSlika p{
 	margin-top: 5px;
-}
+}*/
 #conteiner{
 	background-color: rgba(0,0,0,0.8);
 	width: inherit;
 	height: 350px;
 	padding: 30px;
-}
-#conteiner h1{
-	text-align: center;
-	font-family: 'Caveat', cursive;
 }
 .levaKolona{
 	display: flex;
@@ -141,6 +144,7 @@ ul{
 	margin:10px auto;
 	color: rgba(0,0,0,0.7);
 	text-align: center;
+	font-family: 'Caveat', cursive;
 }
 .podnozje {
 	width: 80%;
@@ -159,23 +163,21 @@ ul{
 	transition: width 2s, height 2s, transform 3s;
 }
 .small-image:hover{
-	transform: scale(1.7,1);
-	transform:translate(50px,50px,50px);
+	transform: scale(1.1,1.1);
+	transform:translate(10px,10px,10px);
 }
 
 #image1{
 	background-image: url('../images/sminka1.jpg');
 	border-radius: 5px;
 }
-
-#image2{
-	background-image: url('../images/lice.jpg');
+#image3{
+	background-image: url('../images/slika6.jpg');
+	margin-right: 5px;
 	border-radius: 5px;
 }
-
-#image3{
-	background-image: url('../images/nokti.jpg');
-	margin-right: 0;
+#image2{
+	background-image: url('../images/nokti2.jpg');
 	border-radius: 5px;
 }
 .opis{
@@ -185,7 +187,7 @@ ul{
 	background-color: rgba(255,255,255,0.3);
 	border:1px dashed #cd5c5c;
 	border-radius: 5px;
-	width: 70px;
+	width: 100px;
 }
 .opis a{
 	color: #8f4040;
@@ -224,7 +226,7 @@ ul{
 /*AUTOR*/
 #autorSlika{
 	text-align: center;
-	padding: 20px;
+	padding: 70px;
 }
 /*Nase usluge*/
 .cenovnik{
@@ -273,14 +275,6 @@ tbody{
     vertical-align: middle;
     border-color: inherit;
 }
-/*Galerija*/
-#slike{
-	margin: 0px auto;
-	width: 65%;
-}
-#slike img{
-	padding: 15px;
-}
 .dugme{
     background:rgba(0,0,0,0.8);
     padding: 6px 16px;
@@ -288,11 +282,6 @@ tbody{
     display: inline-block;
     margin-top: 10px;
     color: rgb(251, 232, 236);
-}
-h2{
-	text-align: center;
-	color: rgba(0,0,0,0.7);
-	padding: 5px;
 }
 .kontakt label{
   display: block;
@@ -331,6 +320,37 @@ h2{
   padding: 20px;
   margin:0px auto;
   width: 20%;
+}
+.slike{
+	width: 100%;
+}
+.slike-galerije img{
+  filter: grayscale(40%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slike-galerije img:hover{
+  filter: none;
+}
+.slike-galerije {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  margin:12px;
+  width: 65%;
+  margin: 0px auto;
+  margin-bottom: 12px;
+}
+.slike h1{
+	padding: 5px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+#autorSlika p{
+	color: rgba(0,0,0,0.7);
 }
 
 
