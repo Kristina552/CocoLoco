@@ -200,6 +200,7 @@ h2{
 	flex: 2;
 	margin-left: 60px;
 	text-align: center;
+	font-family: 'Signika', sans-serif; 
 }
 .info ul li{
 	padding: 10px;
@@ -213,12 +214,10 @@ h2{
 #mreze{
 	text-align: center;
 }
-
 #mreze ul li{
 	display: inline;
 	margin-left: 20px;
 }
-
 #mreze ul li a{
 	font-size: 30px;
 	color: rgb(250, 232, 236);
