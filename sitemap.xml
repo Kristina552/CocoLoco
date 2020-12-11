@@ -3,19 +3,19 @@
 	<url>
 		<loc>https://kristina552.github.io/cocoloco/index.html</loc>
 		<lastmod>2020-12-03</lastmod>
-		<changefreq>daily</changefreq>
-		<prioriry>1</prioriry>
+		<changefreq>monthly</changefreq>
+		<prioriry>0.5</prioriry>
 	</url>
 	<url>
 		<loc>https://kristina552.github.io/cocoloco/usluge.html</loc>
 		<lastmod>2020-12-03</lastmod>
 		<changefreq>daily</changefreq>
-		<prioriry>1</prioriry>
+		<prioriry>0.8</prioriry>
 	</url>
 	<url>
 		<loc>https://kristina552.github.io/cocoloco/galerija.html</loc>
 		<lastmod>2020-11-25</lastmod>
-		<changefreq>daily</changefreq>
+		<changefreq>monthly</changefreq>
 		<prioriry>0.5</prioriry>
 	</url>
 	<url>
